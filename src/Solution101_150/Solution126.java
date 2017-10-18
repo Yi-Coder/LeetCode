@@ -18,34 +18,23 @@ public class Solution126 {
     
     public void path(String beginWord, String endWord, List<String> wordList, List<List<String>> result,List<String> path){	
     	
-    	if(wordList.isEmpty()) return;
-
-    	 for(int i = 0; i<wordList.size();i++){
-    		 if(hammingdistance(wordList.get(i), path.get(path.size()-1)) == 1){
-    			 if(hammingdistance(wordList.get(i), endWord) == 0){
-    				 path.add(wordList.get(i));
-        			 result.add(new ArrayList<String>(path));
-        			 //path.remove(path.size()-1);
-        			 //return;
-    			 } else{
-	    			 //System.out.println(wordList);
-	    			 //System.out.println(hammingdistance(wordList.get(i), path.get(path.size()-1)));
-	    			 path.add(wordList.get(i));
-	    			 
-	    			 List<String> temp = new ArrayList<String>(wordList);
-	    			 temp.remove(i);
-	    			 //System.out.println(wordList.size());
-	    			 path(beginWord,endWord, temp, result,path);
-	    			 System.out.println(path.get(path.size()-1));
-	    			 
-	    			//wordList.add(wordList.get(i));
-    			 }
-    			 path.remove(path.size()-1);
-    		 } 
-    		 //System.out.println(path.size());
-    		//if(path.size()>0) { path.remove(path.size()-1);}
-    		
-    	 }
+    	if(beginWord.equals(endWord)) {
+    		List<String> temp = new ArrayList<String>();
+    		temp = path;
+    		result.add(temp);
+    		return;
+    	}
+    	
+    	  Queue<String > queue = new LinkedList<String>();
+    	
+    	while(!wordList.isEmpty() && !queue.isEmpty()){
+    		for(int i = 0; i<wordList.size();i++){
+    			if(hammingdistance(queue.poll(), wordList.get(i))==1){
+    				queue.add(wordList.get(i));
+    			}
+    		}
+    	}
+    	
     	
 		
 	}

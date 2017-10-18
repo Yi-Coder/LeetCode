@@ -1,26 +1,31 @@
 package Solution51_100;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import Solution201_250.Solution224;
+import Solution201_250.Solution228;
+import Solution251_300.Solution274;
+import Solution251_300.Solution290;
+import Solution251_300.Solution299;
+import Solution301_350.Solution301;
+import Solution301_350.Solution306;
+
+
 
 public class test {
 	  
 	public static void main(String[] args) {
-		Solution1 so = new Solution84();
+
+		//System.out.println(Solution301.removeInvalidParentheses("()()))((()"));
+	
+	Solution306 so = new Solution306();
+	
+	 System.out.println(so.isAdditiveNumber("8917"));
 		
-		//String s1 = "ADOBECODEBANC";
-		//String s2 = "ABC";
-		//String s3 ="aabcabad";
-		
-		//int [] heights ={0,2,0};
-		
-		int prices = {7, 1, 5, 3, 6, 4}
- 	
-		//System.out.println(so.findmin(heights, 0, heights.length-1));
-		System.out.println(so.);
-		
-		//System.out.println(so.minDistance(s1, s2));
-		
-		
+	
 		
 	}
 

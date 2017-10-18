@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import Solution101_150.Solution149.Point;
+
 
 
 public class test {
@@ -11,27 +13,23 @@ public class test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Solution134 so = new Solution134();
-		Solution105 s1 = new Solution105();
-	  Solution123 so2 = new Solution123();
+		///Solution134 so = new Solution134();
+		//Solution105 s1 = new Solution105();
+	  //Solution123 so2 = new Solution123();
 	  
-	  Solution150 so150 = new Solution150();
+	  //Solution150 so150 = new Solution150();
 		
 		//String s1 = "ADOBECODEBANC";
 		//String s2 = "ABC";
 		//String s3 ="aabcabad";
-		
 		//int [] heights ={0,2,0};
-		
-		int []prices = {1,2,4,2,5,7,2,4,9,0};
-		
-		
-	    int []pre={5};
-	   int []inorder ={4};
+	
+	    //int []pre={1,2,5,3,4};
+	   //int []inorder ={2,5,1,3,4};
 		
 		//int []nums = {-3,-2,-1,-4};
 		
-		TreeNode root = s1.buildTree(pre, inorder);
+		//TreeNode root = s1.buildTree(pre, inorder);
 		
 		//System.out.println(root.val);
 		
@@ -52,10 +50,17 @@ public class test {
 		//System.out.println(so.hammingdistance("cog", "cog"));
 
 		//System.out.println(so.findLadders(startword, endWord, wordList));
+
+		//int [] ratings = {100,4,200,1,3,2};
 		
-		String [] tokens = {"4", "13", "5", "/", "+"};
+		 // Solution128 so128 = new Solution128();
 		
-		System.out.println(so150.evalRPN(tokens));
+		String  s = "cars";
+		
+		List<String> wordDict = Arrays.asList("car", "ca","rs");
+		
+		System.out.println(Solution139.wordBreak(s, wordDict));
+		
 
 	}
 
